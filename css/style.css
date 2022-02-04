@@ -53,6 +53,32 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 430px) {
+  #main-wrap {
+    padding: 115px 0;
+  }
+
+  #main-wrap .title {
+    width: calc(100% - 20px);
+  }
+
+  #main-wrap .topic {
+    width: calc(100% - 90px);
+    height: 77px;
+    right: 0;
+  }
+
+  #main-wrap .img-wrap {
+    width: calc(100% - 180px);
+    height: 133px;
+    right: 0;
+  }
+  
+  #main-wrap .btn-wrap {
+    right: 0;
+  }
+}
+
 /* 메인 페이지 */
 #main-wrap .progress-wrap {
   display: none;
@@ -132,6 +158,19 @@
   transition: all .5s;
 }
 
+#step-wrap .step:nth-of-type(4) .answer2-wrap .answer2 {
+  top: 12px;
+}
+
+#step-wrap .step:nth-of-type(6) .answer1-wrap .answer1,
+#step-wrap .step:nth-of-type(7) .answer1-wrap .answer1,
+#step-wrap .step:nth-of-type(9) .answer1-wrap .answer1,
+#step-wrap .step:nth-of-type(9) .answer2-wrap .answer2,
+#step-wrap .step:nth-of-type(10) .answer1-wrap .answer1,
+#step-wrap .step:nth-of-type(11) .answer1-wrap .answer1 {
+  top: 39px;
+}
+
 #step-wrap .step .question-wrap {
   position: relative;
   margin-top: 100px;
@@ -186,9 +225,18 @@
     margin: 0 9%;
   }
 
+  #step-wrap .step:nth-of-type(5) .question-wrap .question {
+    letter-spacing: 1px;
+  }
+
   #step-wrap .step .answer1-wrap,
   #step-wrap .step .answer2-wrap {
     width: calc(100% - 80px);
+  }
+
+  #step-wrap .step .answer1-wrap .answer1,
+  #step-wrap .step .answer2-wrap .answer2 {
+    font-size: 16px;
   }
 }
 
@@ -233,19 +281,19 @@
 
 /* 결과 페이지 */
 #main-wrap .result-img-wrap {
-  width: 560px;
+  width: 310px;
 }
 
 #main-wrap .result-title {
+  margin-top: 18px;
   position: relative;
-  top: -111px;
   font-size: 25px;
   font-family: 'Do Hyeon', sans-serif;
 }
 
 #main-wrap .result-content {
+  margin-top: 10px;
   position: relative;
-  top: -97px;
   font-size: 10px;
   font-family: 'Do Hyeon', sans-serif;
 }

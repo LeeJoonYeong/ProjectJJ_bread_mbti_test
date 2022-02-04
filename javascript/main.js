@@ -61,6 +61,7 @@ $step_wrap.addEventListener('click', (event) => {
           } else {
             mbti.N++;
           }
+          
           break;
         case 5:
           if(target.classList.contains('answer1')) {

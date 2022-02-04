@@ -6,7 +6,6 @@ const $result_content = document.querySelector('#main-wrap .result-content');
 
 if(window.location.pathname === '/intj.html') {
   $result_img_wrap.style.position = 'relative';
-  $result_img_wrap.style.left = '50px';
-  $result_img_wrap.style.top = '-40px';
+  $result_img_wrap.style.width = '160px';
 }
 
