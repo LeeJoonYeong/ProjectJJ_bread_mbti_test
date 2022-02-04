@@ -55,6 +55,11 @@
 
 /* 메인 페이지 */
 #main-wrap .progress-wrap {
+  display: none;
+}
+
+#main-wrap .progress-wrap.active {
+  display: block;
   position: relative;
   margin-top: 30px;
 }
@@ -67,6 +72,30 @@
   border-radius: 20px;
   position: relative;
 }
+
+#main-wrap .progress-wrap .bar .progress {
+  display: block;
+  width: 0%;
+  height: 100%;
+  background-color: #e68d34;
+  border-radius: 20px;
+  transition: all .6s;
+}
+
+@keyframes leverPop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 #main-wrap .progress-wrap .lever {
   display: block;
   background: url(../images/progress_lever.png) no-repeat;
@@ -74,13 +103,22 @@
   height: 52px;
   position: absolute;
   top: -23px;
-  left: 0;
+  left: -20px;
+  transition: left .6s;
+}
+
+#main-wrap .progress-wrap .lever.active {
+  animation-name: leverPop;
+  animation-duration: .4s;
 }
 
 #step-wrap {
+  display: none;
+}
+
+#step-wrap.active {
   position: relative;
   display: flex;
-  /* width: 305px; */
   width: 1200%;
 }
 
@@ -129,4 +167,88 @@
   font-size: 18px;
   position: absolute;
 }
+
+@media screen and (max-width: 430px) {
+
+  #main-wrap .progress-wrap.active {
+    width: calc(100% - 100px);
+  }
+
+  #main-wrap .progress-wrap .bar {
+    width: 100%;
+  }
+
+  #step-wrap .step .question-wrap {
+    width: 100%;
+  }
+
+  #step-wrap .step .question-wrap .question {
+    margin: 0 9%;
+  }
+
+  #step-wrap .step .answer1-wrap,
+  #step-wrap .step .answer2-wrap {
+    width: calc(100% - 80px);
+  }
+}
+
+/* 로딩 페이지 */
+#main-wrap .loading-title {
+  display: none;
+}
+
+#main-wrap .loading-title.active {
+  display: block;
+  width: 400px;
+  position: relative;
+  top: -45px;
+}
+
+@keyframes loadingRotate {
+  form {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(365deg);
+  }
+}
+
+#main-wrap .loading-img-wrap {
+  display: none;
+}
+
+#main-wrap .loading-img-wrap.active {
+  display: block;
+  position: relative;
+  width: 400px;
+  top: -444px;
+  left: 16px;
+  animation-name: loadingRotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+/* 결과 페이지 */
+#main-wrap .result-img-wrap {
+  width: 560px;
+}
+
+#main-wrap .result-title {
+  position: relative;
+  top: -111px;
+  font-size: 25px;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+#main-wrap .result-content {
+  position: relative;
+  top: -97px;
+  font-size: 10px;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+
 

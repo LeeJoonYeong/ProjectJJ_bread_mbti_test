@@ -9,17 +9,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
   <script defer src="./javascript/main.js"></script>
-  <title>테스트</title>
+  <title>BBANG MBTI TEST</title>
 </head>
 
 <body>
   <main>
     <article id="main-wrap">
-      <section class="progress-wrap">
-        <span class="bar"></span>
+      <section class="progress-wrap active">
+        <span class="bar">
+          <span class="progress"></span>
+        </span>
         <span class="lever"></span>
       </section>
-      <section id="step-wrap">
+      <section id="step-wrap" class="active">
         <div class="step">
           <article class="question-wrap">
             <p class="question">Q1. 즐거운 주말 아침! <br> 오늘 아침은 빵과 커피를 먹어 볼까?</p>
@@ -177,6 +179,12 @@
           </article>
         </div>
       </section>
+      <div class="loading-title">
+        <img src="./images/loading-title.png" alt="타이틀">
+      </div>
+      <div class="loading-img-wrap">
+        <img src="./images/loading-content.png" alt="로딩 이미지">
+      </div>
     </article>
   </main>
 </body>
